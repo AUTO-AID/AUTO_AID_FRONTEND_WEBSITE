@@ -1,0 +1,228 @@
+// import React from "react";
+// import { Box, Typography, TextField, IconButton } from "@mui/material";
+// import SendIcon from "@mui/icons-material/Send";
+// import downloadBg from "../assets/header-bg.jpg"; // ✅ غيري الصورة اللي بدك ياها
+
+// const DownloadSection = () => {
+//   return (
+//     <Box
+//       id= "download" 
+//       sx={{
+//         width: "100%",
+//         minHeight: "100vh",
+//         backgroundImage: `
+//     linear-gradient(to right, #B57EDC, #111111),
+//           url(${downloadBg})
+//         `,
+//         backgroundBlendMode: "overlay",
+//         backgroundSize: "cover",
+//         backgroundPosition: "center",
+//         backgroundRepeat: "no-repeat",
+//         display: "flex",
+//         flexDirection: "column",
+//         alignItems: "center",
+//         justifyContent: "center",
+//         color: "#fff",
+//         textAlign: "center",
+//         padding: "60px 20px",
+//       }}
+//     >
+//       {/* Icon */}
+//       {/* <Typography variant="h3" sx={{ fontWeight: "bold", mb: 1 }}>
+//         🎁
+//       </Typography> */}
+
+//       {/* Title */}
+//       <Typography variant="h3" sx={{ fontWeight: "bold", mb: 2 }}>
+//         DOWNLOAD NOW
+//       </Typography>
+
+//       {/* Subtitle */}
+//       <Typography sx={{ mb: 4, fontSize: "18px", opacity: 0.9 }}>
+//         Click the icon below to Download Roadguru app from your favorite mobile store.
+//       </Typography>
+
+//       {/* Store Buttons */}
+//       <Box
+//         sx={{
+//           display: "flex",
+//           gap: "25px",
+//           mb: 6,
+//           flexWrap: "wrap",
+//           justifyContent: "center",
+//         }}
+//       >
+//         {/* <img
+//           src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Available_on_the_App_Store_%28black%29_SVG.svg"
+//           alt="App Store"
+//           style={{ width: "180px", cursor: "pointer" }}
+//         /> */}
+
+//         <img
+//           src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+//           alt="Play Store"
+//           style={{ width: "180px", cursor: "pointer" }}
+//         />
+//       </Box>
+
+//       {/* Updates Title */}
+//       <Typography
+//         variant="h5"
+//         sx={{ fontWeight: "bold", letterSpacing: "2px", mb: 3 }}
+//       >
+//         DON'T MISS OUR FUTURE UPDATES...
+//       </Typography>
+
+//       {/* Email Box */}
+//       <Box
+//         sx={{
+//           display: "flex",
+//           alignItems: "center",
+//           backgroundColor: "rgba(255,255,255,0.2)",
+//           padding: "5px 10px",
+//           borderRadius: "30px",
+//           width: { xs: "90%", sm: "400px" },
+//           backdropFilter: "blur(6px)",
+//         }}
+//       >
+//         <TextField
+//           placeholder="Enter your email here..."
+//           variant="standard"
+//           InputProps={{
+//             disableUnderline: true,
+//             sx: { color: "#fff" },
+//           }}
+//           sx={{ flex: 1 }}
+//         />
+//         <IconButton sx={{ color: "#fff" }}>
+//           <SendIcon />
+//         </IconButton>
+//       </Box>
+//     </Box>
+//   );
+// };
+
+// export default DownloadSection;
+import React from "react";
+import { Box, Typography, TextField, IconButton } from "@mui/material";
+import SendIcon from "@mui/icons-material/Send";
+import downloadBg from "../assets/header-bg.jpg";
+
+const DownloadSection = () => {
+  return (
+    <Box
+      id="download"
+      sx={{
+        width: "100%",
+        minHeight: { xs: "90vh", md: "100vh" },
+        backgroundImage: `
+          linear-gradient(to right, rgba(181, 126, 220, 0.65), rgba(12, 12, 12, 0.65)),
+          url(${downloadBg})
+        `,
+        backgroundBlendMode: "overlay",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        color: "#fff",
+        textAlign: "center",
+        padding: { xs: "40px 15px", sm: "60px 20px" },
+      }}
+    >
+      {/* Title */}
+      <Typography
+        variant="h3"
+        sx={{
+          fontWeight: "bold",
+          mb: { xs: 1, sm: 2 },
+          fontSize: { xs: "28px", sm: "36px", md: "48px" },
+        }}
+      >
+        DOWNLOAD NOW
+      </Typography>
+
+      {/* Subtitle */}
+      <Typography
+        sx={{
+          mb: { xs: 3, sm: 4 },
+          fontSize: { xs: "14px", sm: "17px" },
+          opacity: 0.9,
+          maxWidth: "700px",
+        }}
+      >
+        Click the icon below to Download Roadguru app from your favorite mobile store.
+      </Typography>
+
+      {/* Store Buttons */}
+     <Box
+         sx={{
+           display: "flex",
+          gap: "25px",
+          mb: 6,
+           flexWrap: "wrap",
+          justifyContent: "center",
+        }}
+      >
+        {/* <img
+          src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Available_on_the_App_Store_%28black%29_SVG.svg"
+          alt="App Store"
+          style={{
+            width: "180px",
+            maxWidth: "45%",
+            cursor: "pointer",
+          }}
+        /> */}
+
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+          alt="Play Store"
+     style={{ width: "180px", cursor: "pointer" }}
+        />
+      </Box>
+
+      {/* Updates Title */}
+      <Typography
+        variant="h5"
+        sx={{
+          fontWeight: "bold",
+          letterSpacing: "2px",
+          mb: 3,
+          fontSize: { xs: "16px", sm: "22px" },
+        }}
+      >
+        DON'T MISS OUR FUTURE UPDATES...
+      </Typography>
+
+      {/* Email Box */}
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          backgroundColor: "rgba(255,255,255,0.25)",
+          padding: { xs: "4px 8px", sm: "6px 12px" },
+          borderRadius: "30px",
+          width: { xs: "95%", sm: "400px", md: "450px" },
+          backdropFilter: "blur(6px)",
+        }}
+      >
+        <TextField
+          placeholder="Enter your email here..."
+          variant="standard"
+          InputProps={{
+            disableUnderline: true,
+            sx: { color: "#fff", fontSize: { xs: "14px", sm: "16px" } },
+          }}
+          sx={{ flex: 1 }}
+        />
+        <IconButton sx={{ color: "#fff" }}>
+          <SendIcon />
+        </IconButton>
+      </Box>
+    </Box>
+  );
+};
+
+export default DownloadSection;
