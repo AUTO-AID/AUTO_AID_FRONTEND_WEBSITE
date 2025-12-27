@@ -45,9 +45,10 @@ import { prefixer } from "stylis";
 import rtlPlugin from "stylis-plugin-rtl";
 
 import { getTheme } from "./theme.js";
+import { ColorModeContext } from "./ColorModeContext";
 
 // Context for theme toggle
-export const ColorModeContext = createContext({ toggleColorMode: () => {} });
+// export const ColorModeContext = createContext({ toggleColorMode: () => {} });
 
 function RootWrapper() {
   const [lang, setLang] = useState(i18n.language || "en");

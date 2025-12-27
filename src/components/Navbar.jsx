@@ -238,7 +238,7 @@ import i18n from "../i18n";
 import { useTheme } from "@mui/material/styles";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
-import { ColorModeContext } from "../main";
+import { ColorModeContext } from "../ColorModeContext";
 import { useContext } from "react";
 
 const Navbar = () => {
