@@ -6,7 +6,8 @@ import WhyChooseUs from "../components/WhyChooseUs";
 import SalientFeatures from "../components/SalientFeatures";
 import Footer from "../components/Footer";
 import DownloadSection from"../components/DownloadSection";
-import TeamSection from "../components/TeamSection";
+import StatisticsSection from "../components/StatisticsSection";
+import TestimonialsSection from "../components/TestimonialsSection";
 import ContactSection from "../components/ContactSection";
 const Home = () => {
   return (
@@ -16,8 +17,9 @@ const Home = () => {
       <ServiceSection/>
       <WhyChooseUs/>
       <SalientFeatures/>
-      <TeamSection/>
+      <StatisticsSection/>
       <ContactSection/>
+      <TestimonialsSection/>
       <DownloadSection/>
       <Footer/>
     </>

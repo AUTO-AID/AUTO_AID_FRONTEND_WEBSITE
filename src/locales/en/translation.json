@@ -1,149 +1,179 @@
-
 {
   "home": "Home",
   "features": "Features",
-  "screenshot": "Screenshot",
+  "screenshot": "Screenshots",
   "team": "Team",
   "contact": "Contact",
   "download1": "Download",
 
   "hero": {
     "title": {
-      "line1": "Your assistance",
-      "line2": "when you are",
-      "line3": "on the Road"
+      "line1": "Your Roadside",
+      "line2": "Assistance",
+      "line3": "Partner"
     },
     "download": "Download"
   },
-    "download": {
-    "title": "DOWNLOAD NOW",
-    "subtitle": "Click the icon below to Download Roadguru app from your favorite mobile store.",
-    "updates": "DON'T MISS OUR FUTURE UPDATES...",
-    "emailPlaceholder": "Enter your email here..."
+
+  "download": {
+    "title": "GET THE APP NOW",
+    "subtitle": "Download CarHero from your favorite mobile store and stay prepared for any roadside emergency.",
+    "updates": "STAY UPDATED WITH NEW FEATURES",
+    "emailPlaceholder": "Enter your email address..."
   },
-    "footer": {
+
+  "footer": {
     "logoAlt": "CarHero Logo",
-    "privacy": "Privacy | Terms and Conditions",
+    "tagline": "Your trusted roadside assistance partner",
+    "privacy": "Privacy Policy | Terms & Conditions",
     "copyright": "© 2025 CarHero – All rights reserved."
   },
-  
-  "service": {
-    "title": "Our Features",
 
+  "service": {
+    "title": "Our Services",
+    "subtitle": "Professional assistance to keep you moving safely",
+    
     "feature1_title": "24/7 Road Assistance",
-    "feature1_desc": "Our mechanics are available 24/7 to help you on the road and ensure you're never stranded.",
+    "feature1_desc": "Expert mechanics available around the clock to help you on the road, ensuring you're never stranded.",
 
     "feature2_title": "Complete Services",
-    "feature2_desc": "We offer all maintenance and repair services wherever you are — simple, fast, and reliable.",
+    "feature2_desc": "Full range of maintenance and repair services delivered wherever you are — fast, simple, and reliable.",
 
     "feature3_title": "Certified Mechanics",
-    "feature3_desc": "Our professional and certified mechanics provide trusted, high-quality service.",
+    "feature3_desc": "Our professional, certified mechanics provide trusted, high-quality service you can count on.",
 
-    "feature4_title": "Affordable Pricing",
-    "feature4_desc": "Get the same top-tier service at a lower cost. No hidden fees, just honest work.",
+    "feature4_title": "Transparent Pricing",
+    "feature4_desc": "Premium service at competitive prices. No hidden fees, just honest and transparent pricing.",
 
-    "feature5_title": "Support Guarantee",
-    "feature5_desc": "We ensure quality and safety with every service. Our support team is always ready."
+    "feature5_title": "Quality Guarantee",
+    "feature5_desc": "We ensure quality and safety with every service. Our dedicated support team is always ready to help."
   },
-  
+
   "why": {
-    "title": "WHY CHOOSE US?",
-    "subtitle": "We have enough reasons for you to choose our excellence services.",
+    "title": "WHY CHOOSE CARHERO?",
+    "subtitle": "Experience the difference with our premium roadside assistance services.",
     "features": {
       "assistance": {
         "title": "24/7 Road Assistance",
-        "desc": "We provide our best assistance to your vehicle round the clock so that you don’t have to suffer due to your vehicular problems. We provide immediate on-road help, anywhere, anytime."
+        "desc": "Round-the-clock support for your vehicle emergencies. We provide immediate on-road assistance anywhere, anytime, so you never have to worry about being stranded."
       },
       "pricing": {
-        "title": "Affordable Pricing",
-        "desc": "We provide our best assistance to your vehicle round the clock so that you don’t have to suffer due to your vehicular problems. We provide immediate on-road help, anywhere, anytime."
+        "title": "Competitive Pricing",
+        "desc": "Quality service at fair prices. We believe premium assistance shouldn't break the bank. Get professional help without unexpected costs."
       },
       "come_to_you": {
-        "title": "We Come to You!",
-        "desc": "Whether you are in the office or gym or at watching movie with the family. You can schedule a call and we will come to work on your car. Whether you are in the vehicle or not, we facilitate real-time location, speed, and direction tracking to you."
+        "title": "We Come to You",
+        "desc": "Whether you're at work, the gym, or enjoying time with family — schedule a service and we'll come to you. Real-time tracking keeps you informed every step of the way."
       },
       "certified": {
-        "title": "Certified Mechanics",
-        "desc": "We have a number of certified experts, technicians, and mechanics that specialize in various on-road emergency and garage-type services. With them, you can be least worried about your vehicle and you can expect fine service deliverables quickly."
+        "title": "Certified Experts",
+        "desc": "Our team of certified technicians and mechanics specialize in emergency and garage services. Trust your vehicle with professionals who deliver excellence quickly."
       }
     }
   },
-  "salient_title": "SALIENT FEATURES",
-  "salient_description": "We understand that your vehicle is one of your prized possessions and you rely on it daily. Our perfect emergency on-road services are available anytime, anywhere so you never feel stranded.",
+
+  "salient_title": "KEY FEATURES",
+  "salient_description": "We understand your vehicle is essential to your daily life. Our comprehensive roadside services are available anytime, anywhere — so you're never left stranded.",
 
   "left_features": [
     {
       "title": "Car Breakdown",
-      "text": "Your vehicle can ditch you anytime while you are on the roads..."
+      "text": "Unexpected breakdowns happen. Our team responds quickly to get you back on the road safely."
     },
     {
       "title": "Flat Tire",
-      "text": "Flat tires are irritating and can occur even in unexpected situations..."
+      "text": "Tire troubles? We provide fast tire change and repair services right where you are."
     },
     {
-      "title": "No Fuel",
-      "text": "Get on-demand fuel delivery anywhere, anytime..."
+      "title": "Fuel Delivery",
+      "text": "Ran out of fuel? We deliver fuel to your location so you can continue your journey."
     }
   ],
 
   "right_features": [
     {
-      "title": "Locked Car",
-      "text": "Lost your keys or locked yourself outside? We unlock safely..."
+      "title": "Locked Out",
+      "text": "Keys locked inside? Our experts safely unlock your vehicle without damage."
     },
     {
-      "title": "Smoke from Car",
-      "text": "Seeing smoke? Park safely and request immediate help..."
+      "title": "Engine Trouble",
+      "text": "Smoke or warning lights? Park safely and request immediate expert assistance."
     },
     {
-      "title": "Battery Jumpstart",
-      "text": "Dead battery? We provide jumpstart service quickly..."
+      "title": "Battery Service",
+      "text": "Dead battery? We provide quick jumpstart and battery replacement services."
     }
   ],
-  "faqData": [
-    { "q": "How can I contact support?", "a": "You can contact us through the contact form below or email us directly." },
-    { "q": "Do you offer refunds?", "a": "Yes, we offer refunds within 30 days of purchase." },
-    { "q": "Is my data safe with you?", "a": "Absolutely. We prioritize your privacy and data protection." },
-    { "q": "Can I change my subscription plan later?", "a": "Yes, you can upgrade or downgrade your plan anytime." },
-    { "q": "Do you provide 24/7 customer service?", "a": "Yes, our support team is available around the clock." }
-  ],
 
- "contact1": {
-    "title": "Contact Us",
-    "subtitle": "Have questions or want to partner with us? Reach out!",
+  "contact1": {
+    "title": "Get in Touch",
+    "subtitle": "Have questions or interested in partnering with us? We'd love to hear from you!",
     "faq_title": "Frequently Asked Questions",
     "send_message": "Send Us a Message",
-    "full_name": "Full Name",
-    "email": "Email",
+    "full_name": "Your Full Name",
+    "email": "Email Address",
     "message": "Your Message",
     "submit_btn": "Send Message",
     "partner_title": "Become a Service Partner",
-    "register_btn": "Click to Register"
+    "register_btn": "Register as Partner"
   },
 
   "contact_faq": [
-    { "q": "How can I contact support?", "a": "You can contact us through the contact form below or email us directly." },
-    { "q": "Do you offer refunds?", "a": "Yes, we offer refunds within 30 days of purchase." },
-    { "q": "Is my data safe with you?", "a": "Absolutely. We prioritize your privacy and data protection." },
-    { "q": "Can I change my subscription plan later?", "a": "Yes, you can upgrade or downgrade your plan anytime." },
-    { "q": "Do you provide 24/7 customer service?", "a": "Yes, our support team is available around the clock." }
+    { "q": "How can I contact support?", "a": "You can reach us through the contact form above, by email, or through our mobile app's support feature." },
+    { "q": "What areas do you cover?", "a": "We currently operate in major cities across Syria. Check our app for specific coverage in your area." },
+    { "q": "How quickly can I get help?", "a": "Our average response time is under 30 minutes in covered areas, depending on your location and traffic conditions." },
+    { "q": "Is my payment information secure?", "a": "Absolutely. We use industry-standard encryption and never store your complete payment details." },
+    { "q": "Can I schedule services in advance?", "a": "Yes! You can book scheduled maintenance or services through our app at your convenience." }
   ],
 
   "partner_cards": [
     {
-      "title": "Sign-on with the App",
-      "desc": "Download the app from Google Store. We suggest using an Android 7'' tablet with SMS capability. Receive emergency service notifications within your region. Never pay for parts upfront—we handle payments after approval."
+      "title": "Easy Registration",
+      "desc": "Download our partner app from Google Play. Receive service notifications for your area. Payments are processed after job approval — no upfront costs."
     },
     {
-      "title": "Make more money!",
-      "desc": "If you own a garage, spare parts shop, insurance agency, or are an accident assessor, you can partner with CarHero. Valid driver license and Aadhaar required. Must accept digital payments. Minimal startup cost."
+      "title": "Increase Your Income",
+      "desc": "Garage owners, mechanics, spare parts shops, and insurance professionals can partner with CarHero. Valid credentials required. Minimal startup investment."
     },
     {
-      "title": "Choose your schedule",
-      "desc": "You are the boss. Pick service calls based on your time and convenience. Attend calls once accepted. Customer ratings matter—maintain a good record. Payments are settled weekly."
+      "title": "Flexible Schedule",
+      "desc": "You're in control. Accept jobs that fit your schedule. Maintain good ratings for priority access. Weekly payment settlements."
     }
-  ]
-,
+  ],
+
+  "stats": {
+    "title": "Our Impact in Numbers",
+    "subtitle": "Trusted by thousands across Syria to keep them moving.",
+    "users": "Happy Users",
+    "providers": "Verified Mechanics",
+    "cities": "Cities Covered",
+    "response_time": "Min Avg. Response"
+  },
+
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Real experiences from real users across the country",
+    "items": [
+      {
+        "name": "Fouad Al-Naasan",
+        "role": "Business Owner",
+        "feedback": "Honestly, the best roadside app in Syria. Saved me at 2 AM on the highway. Incredible speed!",
+        "rating": 5
+      },
+      {
+        "name": "Maryam Basmaji",
+        "role": "Daily Commuter",
+        "feedback": "Friendly mechanics and very professional app. I love the tracking feature.",
+        "rating": 5
+      },
+      {
+        "name": "Hassan Al-Nanaa",
+        "role": "Taxi Driver",
+        "feedback": "Using it for my fleet. Reliable prices and transparent service. Highly recommended.",
+        "rating": 5
+      }
+    ]
+  },
 
   "team1": {
     "title": "Our Team",
@@ -151,121 +181,123 @@
 
     "name1": "David Wilson",
     "role1": "Senior Auto Technician",
-    "desc1": "Expert in diagnostics & engine repairs, 10+ years in automotive industry.",
+    "desc1": "Expert in diagnostics and engine repairs with 10+ years of automotive experience.",
 
     "name2": "Adam Collins",
     "role2": "Mechanical Specialist",
-    "desc2": "Handling electrical systems, braking systems, tuning & ECU testing.",
+    "desc2": "Specializing in electrical systems, braking systems, and ECU diagnostics.",
 
     "name3": "Maya Johnson",
-    "role3": "Field Rescue Technician",
-    "desc3": "On-site car emergency handling / tires / towing guidance / quick fix specialist."
+    "role3": "Field Rescue Lead",
+    "desc3": "On-site emergency specialist for tires, towing coordination, and quick repairs."
   },
+
   "register": {
-  "notice": "Registration is currently available for service providers across Syria",
-  "title": "Partner Registration",
-  "subtitle": "Fill the form to join our professional network",
+    "notice": "Registration is currently available for service providers across Syria",
+    "title": "Partner Registration",
+    "subtitle": "Join our professional network of service providers",
 
-  "account_info": "Account Info",
-  "owner_name": "Owner Name",
-  "workshop_name": "Workshop Name",
-  "email": "Email Address",
-  "phone": "9XXXXXXXX",
-  "password": "Password",
+    "section_account": "Account Information",
+    "section_business": "Business Details",
+    "owner_name": "Full Owner Name",
+    "workshop_name": "Workshop / Business Name",
+    "email": "Business Email",
+    "email_helper": "We'll use this for official communications",
+    "password": "Create Password",
+    "password_hint": "Minimum 8 characters with numbers",
 
-  "location": "Location",
-  "select_region": "Select Region...",
-  "address": "Detailed Address Description",
+    "location": "Location",
+    "location_details": "Location Details",
+    "service_area": "Select your service area...",
+    "select_region": "Select Region...",
+    "address": "Detailed Address",
+    "detailed_address": "Street address / Landmarks",
+    "set_location_map": "Set precise location on map",
 
-  "services": "Services",
-  "mechanics": "Mechanics",
-  "electrical": "Electrical",
-  "towing": "Towing",
-  "fuel": "Fuel",
-  "service_desc": "Service list and approximate prices...",
+    "homs_city": "Homs City",
+    "rastan": "Rastan",
+    "talkalakh": "Talkalakh",
+    "qusayr": "Qusayr",
 
-  "documents": "Documents & Gallery",
-  "logo": "Workshop Logo",
-  "license": "License / Commercial Register",
-  "photos": "Work Photos",
+    "whatsapp_number": "WhatsApp Number (for notifications)",
+    "facebook_page": "Facebook Business Page",
+    "instagram_link": "Instagram / Portfolio Link",
 
-  "additional": "Additional Info",
-  "experience": "Years of Experience",
-  "work_hours": "Work Hours",
-  "from": "From",
-  "to": "To",
-  "about": "Brief about your workshop...",
-  "commercial_registration": "Commercial Registration Number (optional)",
-  "service_area": "Choose main service area...",
-  "location_details": "Location Details",
-  "detailed_address": "Detailed address / distinctive landmarks",
-  "whatsapp_number": "WhatsApp number (for instant notifications)",
-  "facebook_page": "Commercial Facebook page",
-  "instagram_link": "Instagram link / business gallery",
-  "mechanics": "Mechanical repair",
-  "electrical": "Electrical and computer inspection",
-  "towing": "Towing and rescue",
-  "fuel": "Fuel delivery",
-  "painting": "Painting and bodywork",
-  "tire": "Tire services",
-  "facility_wifi": "Free internet",
-  "facility_waiting": "Air-conditioned waiting room",
-  "facility_parts": "Original spare parts store",
-  "schedule_title": "Weekly Work Schedule",
-  "open": "Open",
-  "closed": "Closed",
-  "submit_request": "Send Registration Request",
-  "next": "Next",
-  "previous": "Previous",
-  "owner_name": "Full Owner Name",
-  "workshop_name": "Workshop Name / Commercial Activity",
-  "email": "Official Email",
-  "password": "Strong Password",
-  "step1_label": "Account & Identity",
-  "step2_label": "Contact & Location",
-  "step3_label": "Services & Features",
-  "step4_label": "Working Hours",
-  "step_counter": "Step {{current}} of {{total}} – Started your journey 🚀",
-  "step_counter_1": "Step {{current}} of {{total}} – Started your journey 🚀",
-  "step_counter_2": "Step {{current}} of {{total}} – Halfway there",
-  "step_counter_3": "Step {{current}} of {{total}} – 75% complete",
-  "step_counter_4": "Step {{current}} of {{total}} – Final step",
-  "from": "From",
-  "to": "To",
-  "validation": {
-    "ownerName_required": "Owner name is required",
-    "ownerName_min": "Name must be at least 3 characters",
-    "workshopName_required": "Workshop name is required",
-    "workshopName_min": "Workshop name must be at least 3 characters",
-    "email_required": "Email is required",
-    "email_invalid": "Invalid email address",
-    "password_required": "Password is required",
-    "password_min": "Password must be at least 8 characters",
-    "password_pattern": "Password must contain letters and numbers",
-    "phone_invalid": "Invalid phone number (must start with 9)",
-    "region_required": "Service area is required",
-    "address_required": "Detailed address is required",
-    "services_required": "Please select at least one service",
-    "please_fix_errors": "Please fix errors before continuing"
-  },
-  "password_weak": "Weak",
-  "password_medium": "Medium",
-  "password_strong": "Strong",
-  "password_very_strong": "Very Strong",
-  "show_password": "Show password",
-  "hide_password": "Hide password",
-  "commercial_registration_tooltip": "Commercial registration number (optional)",
-  "file_too_large": "File is too large (max 5MB)",
-  "file_type_invalid": "File type not supported",
-  "files_rejected": "file(s) rejected",
-  "files_uploaded": "file(s) uploaded successfully",
-  "upload_limit": "Max: 5MB per file (JPEG, PNG, WebP)",
-  "upload_files": "Upload files",
-  "success": "Registration request submitted successfully!",
+    "services_title": "Services Offered",
+    "mechanics": "Mechanical Repair",
+    "electrical": "Electrical & Computer Diagnostics",
+    "towing": "Towing & Recovery",
+    "fuel": "Fuel Delivery",
+    "painting": "Body Work & Painting",
+    "tire": "Tire Services",
 
-  "submit": "SUBMIT REGISTRATION",
-  "back": "← Back to Home"
-}
+    "amenities_title": "Available Facilities",
+    "facility_wifi": "Free WiFi",
+    "facility_waiting": "Air-conditioned Waiting Area",
+    "facility_parts": "OEM Parts Available",
 
+    "documents_title": "Documents & Media",
+    "documents_desc": "Please upload clear photos of your workshop (exterior and interior) and any business documentation.",
+    "upload_hint": "Click or drag files to upload",
+    "upload_types": "Logo, License, Workshop photos",
+    "upload_limit": "Max: 5MB (JPEG, PNG, WebP)",
+    "price_approx": "Approximate Price (SYP)",
+    "files_rejected": "file(s) rejected",
+    "files_uploaded": "file(s) uploaded successfully",
 
+    "experience": "Years of Experience",
+    "staff_title": "Number of Technicians",
+    "about": "Tell us about your workshop and expertise...",
+    "commercial_registration": "Commercial Registration (optional)",
+    "commercial_registration_tooltip": "Verify your business with registration number",
+
+    "schedule_title": "Weekly Schedule",
+    "open": "Open",
+    "closed": "Closed",
+    "from": "From",
+    "to": "To",
+    "emergency_active": "24/7 Emergency Support",
+
+    "step1_label": "Account Info",
+    "step2_label": "Contact & Location",
+    "step3_label": "Services",
+    "step4_label": "Schedule",
+    "step_info": "Step {{current}} of {{total}}",
+    "motivation_step_1": "Let's get started! 🚀",
+    "motivation_step_2": "Almost there! Tell us where you're located 📍",
+    "motivation_step_3": "Show us what you offer 🔧",
+    "motivation_step_4": "Final step! Set your hours ⏰",
+
+    "submit": "Submit Registration",
+    "submit_request": "Submit Registration Request",
+    "next": "Next",
+    "previous": "Previous",
+    "back": "← Back to Home",
+
+    "chars": "chars",
+    "number": "number",
+    "symbol": "symbol",
+
+    "validation": {
+      "ownerName_required": "Owner name is required",
+      "ownerName_min": "Name must be at least 3 characters",
+      "workshopName_required": "Workshop name is required",
+      "workshopName_min": "Workshop name must be at least 3 characters",
+      "email_required": "Email is required",
+      "email_invalid": "Please enter a valid email address",
+      "password_required": "Password is required",
+      "password_min": "Password must be at least 8 characters",
+      "password_pattern": "Password must contain letters and numbers",
+      "phone_invalid": "Invalid phone number (must start with 9)",
+      "region_required": "Service area is required",
+      "address_required": "Detailed address is required",
+      "services_required": "Please select at least one service",
+      "please_fix_errors": "Please fix errors before continuing"
+    },
+    "password_weak": "Weak",
+    "password_medium": "Medium",
+    "password_strong": "Strong",
+    "password_very_strong": "Very Strong",
+    "success": "Registration submitted successfully!"
+  }
 }

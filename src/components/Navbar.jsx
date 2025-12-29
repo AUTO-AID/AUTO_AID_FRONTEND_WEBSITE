@@ -224,6 +224,7 @@ import {
   Toolbar,
   Button,
   Box,
+  Typography,
   IconButton,
   Drawer,
   List,
@@ -241,7 +242,7 @@ import Brightness7Icon from "@mui/icons-material/Brightness7";
 import { ColorModeContext } from "../ColorModeContext";
 import { useContext } from "react";
 
-const Navbar = () => {
+const Navbar = ({ minimal = false }) => {
   const { t } = useTranslation();
   const theme = useTheme();
   const colorMode = useContext(ColorModeContext);
@@ -252,7 +253,6 @@ const Navbar = () => {
     { label: t("home"), id: "home" },
     { label: t("features"), id: "features" },
     { label: t("screenshot"), id: "screenshot" },
-    { label: t("team"), id: "team" },
     { label: t("contact"), id: "contact" },
     { label: t("download1"), id: "download" },
   ];
@@ -314,7 +314,7 @@ const Navbar = () => {
               height: { xs: 110, sm: 150, md: 150 },
               cursor: "pointer",
             }}
-            onClick={() => scrollToSection("home")}
+            onClick={() => minimal ? (window.location.href = '/') : scrollToSection("home")}
           />
 
           {/* Desktop Links */}
@@ -325,7 +325,7 @@ const Navbar = () => {
               gap: 3,
             }}
           >
-            {navItems.map((item) => (
+            {!minimal && navItems.map((item) => (
               <Button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
@@ -388,14 +388,16 @@ const Navbar = () => {
                 <Brightness4Icon />
               )}
             </IconButton>
-            <IconButton
-              sx={{
-                color: "white",
-              }}
-              onClick={() => setOpen(true)}
-            >
-              <MenuIcon sx={{ fontSize: 30 }} />
-            </IconButton>
+            {!minimal && (
+              <IconButton
+                sx={{
+                  color: "white",
+                }}
+                onClick={() => setOpen(true)}
+              >
+                <MenuIcon sx={{ fontSize: 30 }} />
+              </IconButton>
+            )}
           </Box>
         </Toolbar>
       </AppBar>

@@ -168,38 +168,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
           >
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: { xs: "center", md: "flex-start" },
-                gap: 2,
-                mt: 5,
-              }}
-            >
-              <Button
-                variant="outlined"
-                startIcon={<AndroidIcon sx={{ fontSize: 26 }} />}
-                sx={{
-                  padding: { xs: "12px 30px", md: "14px 40px" },
-                  color: "var(--text-light)",
-                  textTransform: "uppercase",
-                  letterSpacing: "1.5px",
-                  borderColor: "var(--text-light)",
-                  borderWidth: "2px",
-                  borderRadius: "30px",
-                  fontWeight: 500,
-                  fontSize: { xs: "14px", md: "16px" },
-                  transition: "all 0.3s ease",
-                  "&:hover": {
-                    backgroundColor: "var(--text-light)",
-                    color: "var(--primary)",
-                    borderColor: "var(--text-light)",
-                  },
-                }}
-              >
-                {t("hero.download")}
-              </Button>
-            </Box>
+            {/* CTA button removed - primary action moved to Contact section */}
           </motion.div>
         </Box>
 

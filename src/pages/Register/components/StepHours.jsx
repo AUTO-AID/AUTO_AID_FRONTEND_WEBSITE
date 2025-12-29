@@ -1,0 +1,93 @@
+import React from 'react';
+import { Clock } from 'lucide-react';
+
+const StepHours = ({ formData, updateFormData, nextStep, prevStep, lang, t }) => {
+  const handleToggle = (day) => {
+    const newHours = { ...formData.workingHours };
+    newHours[day].closed = !newHours[day].closed;
+    updateFormData({ workingHours: newHours });
+  };
+
+  const handleTimeChange = (day, field, value) => {
+    const newHours = { ...formData.workingHours };
+    newHours[day][field] = value;
+    updateFormData({ workingHours: newHours });
+  };
+
+  return (
+    <div className="space-y-10 sm:space-y-12 animate-in zoom-in-95 duration-700">
+      <div className="flex items-center justify-between mb-6 sm:mb-8">
+        <div className="flex items-center gap-4">
+          <div className="p-3 bg-emerald-500/10 dark:bg-[#8f5cb1]/10 rounded-2xl text-emerald-600 dark:text-[#8f5cb1] shadow-sm">
+            <Clock size={26} />
+          </div>
+          <h2 className="text-2xl font-black text-[var(--text-dark)] uppercase tracking-tight">{t.hours.title}</h2>
+        </div>
+      </div>
+
+      <div className="space-y-4 sm:space-y-5">
+        {Object.entries(formData.workingHours).map(([day, config]) => (
+          <div key={day} className={`flex flex-col sm:flex-row items-stretch sm:items-center justify-between p-5 rounded-[12px] border transition-all duration-500 gap-5 ${
+            config.closed 
+                ? 'bg-[var(--input-bg)] border-[var(--border-color)] opacity-60' 
+                : 'bg-[var(--card-bg)] border-[var(--border-color)] shadow-xl'
+          }`}>
+            <div className="flex items-center justify-between sm:justify-start gap-5 sm:min-w-[150px]">
+              <div className="flex items-center gap-4">
+                <div className={`w-3.5 h-3.5 rounded-full transition-all duration-500 ${config.closed ? 'bg-rose-500 grayscale' : 'bg-emerald-500 dark:bg-[#8f5cb1] shadow-[0_0_12px_rgba(16,185,129,0.3)] dark:shadow-[0_0_12px_#8f5cb1] animate-pulse'}`}></div>
+                <span className={`font-bold text-[15px] sm:text-[17px] uppercase tracking-tight ${config.closed ? 'text-[var(--text-muted)]' : 'text-[var(--text-dark)]'}`}>{t.hours.days[day] || day}</span>
+              </div>
+            </div>
+            
+            <div className={`flex items-center gap-3 sm:gap-4 transition-all duration-700 ${config.closed ? 'grayscale pointer-events-none opacity-20' : ''}`}>
+              <div className="relative flex-1 sm:flex-none">
+                <input 
+                  type="time" 
+                  disabled={config.closed}
+                  value={config.start}
+                  onChange={(e) => handleTimeChange(day, 'start', e.target.value)}
+                  className="w-full bg-[var(--input-bg)] border border-[var(--border-color)] rounded-xl px-4 py-3 text-xs sm:text-sm font-bold text-[var(--text-dark)] outline-none focus:border-[#8f5cb1] transition-colors"
+                />
+              </div>
+              <span className="text-[var(--text-muted)] text-xs font-bold uppercase">{t.hours.to}</span>
+              <div className="relative flex-1 sm:flex-none">
+                <input 
+                  type="time" 
+                  disabled={config.closed}
+                  value={config.end}
+                  onChange={(e) => handleTimeChange(day, 'end', e.target.value)}
+                  className="w-full bg-[var(--input-bg)] border border-[var(--border-color)] rounded-xl px-4 py-3 text-xs sm:text-sm font-bold text-[var(--text-dark)] outline-none focus:border-[#8f5cb1] transition-colors"
+                />
+              </div>
+            </div>
+
+            <button 
+              onClick={() => handleToggle(day)}
+              className={`px-6 py-2.5 rounded-xl text-xs font-bold transition-all border duration-300 uppercase ${config.closed ? 'bg-[var(--input-bg)] text-[var(--text-muted)] border-[var(--border-color)]' : 'bg-rose-500/5 text-rose-500 dark:text-rose-400 border-rose-500/10'}`}
+            >
+              {config.closed ? t.hours.closed : t.hours.disable}
+            </button>
+          </div>
+        ))}
+      </div>
+
+      <div className="flex flex-col sm:flex-row gap-5 pt-10">
+        <button 
+          onClick={nextStep}
+          className="order-1 flex-1 group relative inline-flex items-center justify-center gap-3 px-14 py-5 bg-emerald-600 dark:bg-[#8f5cb1] hover:bg-emerald-700 dark:hover:bg-[#d1b3ff] text-white font-black rounded-[12px] shadow-2xl shadow-emerald-600/20 dark:shadow-[#8f5cb1]/20 transition-all active:scale-[0.98]"
+        >
+          <span>{t.common.send}</span>
+          <span className="transition-transform group-hover:rotate-12 group-hover:scale-125">✓</span>
+        </button>
+        <button 
+          onClick={prevStep}
+          className="order-2 px-10 py-5 text-slate-500 dark:text-white/40 hover:text-slate-800 dark:hover:text-white font-black transition-all text-center border-2 border-slate-200/50 dark:border-white/5 rounded-[12px] hover:bg-slate-200/50 dark:hover:bg-white/5 uppercase tracking-widest text-[10px]"
+        >
+          {t.common.prev}
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default StepHours;

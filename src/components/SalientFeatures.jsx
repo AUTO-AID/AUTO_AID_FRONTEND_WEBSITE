@@ -11,41 +11,127 @@ import { motion, useInView } from "framer-motion";
 import mockImg from "../assets/hero-pg.png";
 import { useTranslation } from "react-i18next";
 
-const iconWrapperStyle = {
-  width: 70,
-  height: 70,
-  borderRadius: "50%",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  background: "var(--gradient)",
-};
-
-const iconInnerCircle = {
-  width: 66,
-  height: 66,
-  borderRadius: "50%",
-  background: "var(--bg-light)",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-};
-
-const iconGradientText = {
-  background: "var(--gradient)",
-  WebkitBackgroundClip: "text",
-  WebkitTextFillColor: "transparent",
-  fontSize: "28px",
-};
-
 const SalientFeatures = () => {
   const { t, i18n } = useTranslation();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
-  // جلب الميزات من ملف الترجمة
+  // Get features from translation file
   const featuresLeft = t("left_features", { returnObjects: true });
   const featuresRight = t("right_features", { returnObjects: true });
+
+  const leftIcons = [<HeadphonesIcon />, <LayersIcon />, <ReplayIcon />];
+  const rightIcons = [<SwapVertIcon />, <LinkIcon />, <ArrowRightAltIcon />];
+
+  const FeatureCard = ({ item, icon, index, side }) => (
+    <motion.div
+      initial={{ opacity: 0, x: side === "left" ? -30 : 30 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      whileHover={{ y: -6 }}
+    >
+      <Paper
+        sx={{
+          p: { xs: 2.5, md: 3 },
+          mb: 3,
+          display: "flex",
+          gap: { xs: 2.5, md: 3 },
+          maxWidth: "360px",
+          mx: "auto",
+          alignItems: "flex-start",
+          transition: "all 0.35s cubic-bezier(0.4, 0, 0.2, 1)",
+          backgroundColor: "var(--card-bg)",
+          borderRadius: "18px",
+          border: "1px solid var(--border-color)",
+          cursor: "pointer",
+          "&:hover": {
+            boxShadow: "var(--shadow-hover)",
+            borderColor: "var(--primary-light)",
+            "& .icon-wrapper": {
+              background: "var(--gradient)",
+            },
+            "& .icon-inner": {
+              background: "transparent",
+            },
+            "& .feature-icon-text": {
+              WebkitTextFillColor: "#fff",
+            },
+          },
+        }}
+        elevation={0}
+      >
+        {/* Icon Container */}
+        <Box
+          className="icon-wrapper"
+          sx={{
+            width: 64,
+            height: 64,
+            borderRadius: "50%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            background: "var(--gradient)",
+            flexShrink: 0,
+            transition: "all 0.35s ease",
+          }}
+        >
+          <Box
+            className="icon-inner"
+            sx={{
+              width: 58,
+              height: 58,
+              borderRadius: "50%",
+              background: "var(--card-bg)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              transition: "all 0.35s ease",
+            }}
+          >
+            <Box
+              className="feature-icon-text"
+              sx={{
+                background: "var(--gradient)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                fontSize: "26px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                transition: "all 0.35s ease",
+              }}
+            >
+              {icon}
+            </Box>
+          </Box>
+        </Box>
+
+        {/* Text Content */}
+        <Box sx={{ flex: 1 }}>
+          <Typography
+            sx={{
+              color: "var(--primary)",
+              fontWeight: 600,
+              mb: 0.75,
+              fontSize: { xs: "1rem", md: "1.1rem" },
+            }}
+          >
+            {item.title}
+          </Typography>
+          <Typography
+            sx={{
+              color: "var(--text-muted)",
+              fontSize: { xs: "0.9rem", md: "0.95rem" },
+              lineHeight: 1.65,
+            }}
+          >
+            {item.text}
+          </Typography>
+        </Box>
+      </Paper>
+    </motion.div>
+  );
 
   return (
     <motion.div
@@ -55,88 +141,70 @@ const SalientFeatures = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       <Box
+        id="screenshot"
         sx={{
-          py: 10,
+          py: { xs: 8, md: 12 },
           px: { xs: 2, md: 10 },
-          background: "var(--bg-light)",
+          background: "var(--bg-section-alt)",
           width: "100%",
           direction: i18n.language === "ar" ? "rtl" : "ltr",
           textAlign: i18n.language === "ar" ? "right" : "left",
-          transition: "background-color 0.3s ease",
+          transition: "background-color 0.4s ease",
         }}
       >
         {/* SECTION TITLE */}
-        <Box textAlign="center" mb={6}>
-          <Typography
-            variant="h4"
-            sx={{
-              fontWeight: "bold",
-              mb: 1,
-              letterSpacing: "1px",
-              background: "var(--gradient)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
+        <Box textAlign="center" mb={7}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
           >
-            {t("salient_title")}
-          </Typography>
+            <Typography
+              variant="h4"
+              sx={{
+                fontWeight: 700,
+                mb: 1.5,
+                letterSpacing: "0.5px",
+                background: "var(--gradient)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                fontSize: { xs: "26px", sm: "34px", md: "40px" },
+              }}
+            >
+              {t("salient_title")}
+            </Typography>
 
-          <Typography sx={{ maxWidth: 700, mx: "auto", color: "var(--text-muted)" }}>
-            {t("salient_description")}
-          </Typography>
+            <Typography
+              sx={{
+                maxWidth: 650,
+                mx: "auto",
+                color: "var(--text-muted)",
+                fontSize: { xs: "1rem", md: "1.1rem" },
+                lineHeight: 1.7,
+              }}
+            >
+              {t("salient_description")}
+            </Typography>
+          </motion.div>
         </Box>
 
         {/* CONTENT GRID */}
         <Grid container spacing={4} justifyContent="center" alignItems="center">
           {/* LEFT SIDE CARDS */}
           <Grid item xs={12} md={4}>
-            {featuresLeft.map((item, i) => (
-              <Paper
+            {Array.isArray(featuresLeft) && featuresLeft.map((item, i) => (
+              <FeatureCard
                 key={i}
-                sx={{
-                  p: 3,
-                  mb: 4,
-                  display: "flex",
-                  gap: 3,
-                  maxWidth: "350px",
-                  mx: "auto",
-                  alignItems: "flex-start",
-                  transition: "all 0.3s ease",
-                  backgroundColor: "var(--bg-section-alt)",
-                  borderRadius: "16px",
-                  border: "1px solid var(--border-color)",
-                  "&:hover .innerCircle": {
-                    background: "var(--gradient)",
-                  },
-                  "&:hover .innerIcon": {
-                    WebkitTextFillColor: "var(--text-light)",
-                  },
-                }}
-                elevation={0}
-              >
-                <Box sx={iconWrapperStyle}>
-                  <Box className="innerCircle" sx={iconInnerCircle}>
-                    <span style={iconGradientText} className="innerIcon">
-                      {[
-                        <HeadphonesIcon />,
-                        <LayersIcon />,
-                        <ReplayIcon />,
-                      ][i]}
-                    </span>
-                  </Box>
-                </Box>
-
-                <Box>
-                  <Typography sx={{ color: "var(--primary)", fontWeight: "bold", mb: 1 }}>
-                    {item.title}
-                  </Typography>
-                  <Typography sx={{ color: "var(--text-muted)" }}>{item.text}</Typography>
-                </Box>
-              </Paper>
+                item={item}
+                icon={leftIcons[i]}
+                index={i}
+                side="left"
+              />
             ))}
           </Grid>
 
-          {/* CENTER IMAGE — HIDDEN ON MOBILE & TABLET */}
+          {/* CENTER IMAGE */}
           <Grid
             item
             xs={12}
@@ -146,58 +214,39 @@ const SalientFeatures = () => {
               display: { xs: "none", md: "block" },
             }}
           >
-            <img
-              src={mockImg}
-              alt="mock"
-              style={{ width: "300px", borderRadius: "12px" }}
-            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <Box
+                component="img"
+                src={mockImg}
+                alt="App Preview"
+                sx={{
+                  width: "280px",
+                  borderRadius: "24px",
+                  boxShadow: "0 20px 60px rgba(143, 92, 177, 0.25)",
+                  transition: "transform 0.4s ease",
+                  "&:hover": {
+                    transform: "scale(1.03)",
+                  },
+                }}
+              />
+            </motion.div>
           </Grid>
 
           {/* RIGHT SIDE CARDS */}
           <Grid item xs={12} md={4}>
-            {featuresRight.map((item, i) => (
-              <Paper
+            {Array.isArray(featuresRight) && featuresRight.map((item, i) => (
+              <FeatureCard
                 key={i}
-                sx={{
-                  p: 3,
-                  mb: 4,
-                  display: "flex",
-                  gap: 3,
-                  maxWidth: "350px",
-                  mx: "auto",
-                  alignItems: "flex-start",
-                  transition: "all 0.3s ease",
-                  backgroundColor: "var(--bg-section-alt)",
-                  borderRadius: "16px",
-                  border: "1px solid var(--border-color)",
-                  "&:hover .innerCircle": {
-                    background: "var(--gradient)",
-                  },
-                  "&:hover .innerIcon": {
-                    WebkitTextFillColor: "var(--text-light)",
-                  },
-                }}
-                elevation={0}
-              >
-                <Box sx={iconWrapperStyle}>
-                  <Box className="innerCircle" sx={iconInnerCircle}>
-                    <span style={iconGradientText} className="innerIcon">
-                      {[
-                        <SwapVertIcon />,
-                        <LinkIcon />,
-                        <ArrowRightAltIcon />,
-                      ][i]}
-                    </span>
-                  </Box>
-                </Box>
-
-                <Box>
-                  <Typography sx={{ color: "var(--primary)", fontWeight: "bold", mb: 1 }}>
-                    {item.title}
-                  </Typography>
-                  <Typography sx={{ color: "var(--text-muted)" }}>{item.text}</Typography>
-                </Box>
-              </Paper>
+                item={item}
+                icon={rightIcons[i]}
+                index={i}
+                side="right"
+              />
             ))}
           </Grid>
         </Grid>
